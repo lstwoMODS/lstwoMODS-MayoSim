@@ -1,14 +1,11 @@
 ﻿using HarmonyLib;
-using NotAzzamods.UI.TabMenus;
+using lstwoMODS_Core;
+using lstwoMODS_Core.Hacks;
+using lstwoMODS_Core.UI.TabMenus;
 using ShadowLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
-namespace NotAzzamods.Hacks
+namespace lstwoMODS_MayoSim.Hacks
 {
     internal class SpeedModifier : BaseHack
     {
