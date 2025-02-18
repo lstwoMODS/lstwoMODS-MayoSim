@@ -30,17 +30,17 @@ namespace lstwoMODS_MayoSim.Hacks
 
             ui.AddSpacer(6);
 
-            ui.CreateToggle("infinitePowerUps", "Infinite Power Ups", (b) => infinitePowerUps = b);
+            ui.CreateToggle("lstwo.PowerUpModifier.InfinitePowerUps", "Infinite Power Ups", (b) => infinitePowerUps = b);
 
             ui.AddSpacer(6);
 
-            ui.CreateLBBTrio("Trigger Power Up", "triggerPowerUp", () =>
+            ui.CreateLBBTrio("Trigger Power Up", "lstwo.PowerUpModifier.TriggerPowerUps", () =>
             {
                 UnityEngine.Object.FindObjectOfType<FireProjectile>().powerUpShooting = true;
-            }, "Shooting Power Up", () =>
+            }, "Shooting Power Up", "lstwo.PowerUpModifier.TriggerShootingPowerUp", () =>
             {
                 UnityEngine.Object.FindObjectOfType<PlayerCollision>().health += UnityEngine.Random.Range(1, 4);
-            }, "Health Power Up");
+            }, "Health Power Up", "lstwo.PowerUpModifier.TriggerHealthPowerUp");
 
             ui.AddSpacer(6);
         }

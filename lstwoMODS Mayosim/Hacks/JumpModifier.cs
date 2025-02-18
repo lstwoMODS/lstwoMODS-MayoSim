@@ -28,7 +28,7 @@ namespace lstwoMODS_MayoSim.Hacks
 
             ui.AddSpacer(6);
 
-            var jumpHeightLIB = ui.CreateLIBTrio("Jump Height", "jumpHeight", "50.0");
+            var jumpHeightLIB = ui.CreateLIBTrio("Jump Height", "lstwo.JumpModifier.JumpHeight", "50.0");
             jumpHeightLIB.Input.Component.characterValidation = UnityEngine.UI.InputField.CharacterValidation.Decimal;
             jumpHeightLIB.Button.OnClick = () =>
             {
@@ -37,11 +37,11 @@ namespace lstwoMODS_MayoSim.Hacks
 
             ui.AddSpacer(6);
 
-            ui.CreateToggle("airJump", "Allow Air Jumps", (b) => ignoreGrounded = b);
+            ui.CreateToggle("lstwo.JumpModifier.AirJumps", "Allow Air Jumps", (b) => ignoreGrounded = b);
 
             ui.AddSpacer(6);
 
-            ui.CreateToggle("jetpack", "Jetpack Mode", (b) => jetpackMode = b);
+            ui.CreateToggle("lstwo.JumpModifier.Jetpack", "Jetpack Mode", (b) => jetpackMode = b);
 
             ui.AddSpacer(6);
         }
